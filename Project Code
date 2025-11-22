@@ -1,0 +1,37 @@
+def grade():
+    s = 0
+    print("="*60)
+    print("   STUDENT GRADING SYSTEM")
+    print("="*60 + "\n")
+
+    items = [
+        "Vidyarthi certificate",
+        "Great Learning certificate",
+        "HackerRank 5-star proof",
+        "35 Codes Assignment"
+    ]
+
+    print("Answer yes/no for each:\n")
+    for i, item in enumerate(items, 1):
+        if input(f"{i}. {item}? → ").lower() in ['yes', 'y']:
+            s += 1
+            print("   +1 point\n")
+        else:
+            print("   No point\n")
+
+    print("Extra Certificates (1 point each):")
+    extra = sum(1 for _ in range(4) if input("   → Certificate submitted? → ").lower() in ['yes','y'])
+    s += extra
+    print(f"   Extra Certifications: {extra}/4\n")
+
+    print("="*60)
+    print(f"   FINAL SCORE: {s}/8")
+    print("="*60)
+    grade = "A+" if s==8 else "A" if s==7 else "B+" if s>=6 else "B" if s>=5 else "C" if s>=4 else "Incomplete"
+    print(f"   GRADE: {grade}")
+    print("="*60)
+
+# Run
+name = input("Student Name (optional): ").strip()
+if name: print(f"\nGrading: {name.upper()}\n")
+grade()
