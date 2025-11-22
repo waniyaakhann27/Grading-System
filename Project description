@@ -1,0 +1,36 @@
+
+Objective:A simple Python program for teachers to grade students easily. It asks yes/no questions about submitted certificates (Vidyarthi, Great Learning, HackerRank 5-star, four extra certs) and the 35 Codes Assignment. Each yes gives 1 point (max 8). Finally, it shows the total score and grade (A+, A, B, etc.). (49 words)
+
+Scope and Requirements of the Project
+Project Scope
+A simple, interactive Python program that helps teachers or evaluators quickly check whether a student has submitted all required certificates and assignments, calculate a score out of 8 points, and display the final score with a meaningful grade.
+Functional Requirements
+Accept student name (optional).
+Ask 8 yes/no questions one by one about:
+Vidyarthi certificate
+Great Learning certificate
+HackerRank 5-star proof
+Four extra certificates (Python Basic, Problem Solving Basic, Problem Solving Intermediate, Python Foundation Test)
+35 Codes Assignment
+Give 1 point for each “yes” answer (maximum 8 points).
+Show total score and assign a grade (A+, A, B+, B, C, or Incomplete).
+Display clear feedback after each answer and a final summary.
+Non-Functional Requirements
+Easy to use – simple text questions, no complex input needed.
+Fast – completes grading in under 1 minute.
+Accurate – correctly counts points and shows results every time.
+Reliable – works on any computer with Python installed.
+Clear and readable output with proper formatting.
+Lightweight – no external files or internet required.
+Portable – single Python file that can be shared and run anywhere.
+Technical Expectations
+Written in Python 3 (no external libraries required).
+Single, clean, well-commented .py file (easy to read and modify).
+Uses only built-in Python features (input(), print(), basic data types).
+Object-oriented design with a clear StudentGrader class (optional but preferred).
+Proper indentation, meaningful variable names, and functions/methods for reusability.
+Input validation: accepts “yes/y” or “no/n” (case-insensitive), rejects invalid entries.
+Clear, formatted console output with separators and symbols (✓ / ✗).
+Handles multiple students in one run if needed (easy to extend).
+Runs on Windows, macOS, or Linux without installation.
+No dependencies – works with standard Python installation only.
