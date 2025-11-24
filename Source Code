@@ -1,0 +1,94 @@
+def grade_student():
+    """Calculate student grade based on submissions"""
+    score = 0
+
+    # Header
+    print("=" * 60)
+    print("   STUDENT GRADING SYSTEM".center(60))
+    print("=" * 60)
+    print()
+
+    # Required items (4 points total)
+    required_items = [
+        "Vidyarthi certificate",
+        "Great Learning certificate",
+        "HackerRank 5-star proof",
+        "35 Codes Assignment"
+    ]
+
+    print("Answer 'yes' or 'no' for each required item:\n")
+
+    for i, item in enumerate(required_items, 1):
+        while True:
+            response = input(f"{i}. {item}? -> ").strip().lower()
+            if response in ['yes', 'y', 'ye']:
+                score += 1
+                print("   +1 point\n")
+                break
+            elif response in ['no', 'n']:
+                print("   No point\n")
+                break
+            else:
+                print("   Invalid input. Please answer 'yes' or 'no'.\n")
+
+    # Extra certificates (max 4 additional points)
+    print("=" * 60)
+    print("Extra Certificates (1 point each, maximum 4):")
+    print()
+
+    extra_count = 0
+    for i in range(1, 5):
+        while True:
+            response = input(f"   Extra Certificate {i}/4 submitted? -> ").strip().lower()
+            if response in ['yes', 'y', 'ye']:
+                extra_count += 1
+                score += 1
+                print(f"   +1 point (Extra certificates: {extra_count})\n")
+                break
+            elif response in ['no', 'n']:
+                print("   No further extra certificates will be counted.\n")
+                break
+            else:
+                print("   Please answer 'yes' or 'no'.\n")
+        if response in ['no', 'n']:
+            break
+
+    # Final result
+    print("=" * 60)
+    print(f"   FINAL SCORE: {score}/8".center(60))
+    print("=" * 60)
+
+    if score == 8:
+        grade = "A+ (Outstanding)"
+    elif score == 7:
+        grade = "A (Excellent)"
+    elif score >= 6:
+        grade = "B+ (Very Good)"
+    elif score >= 5:
+        grade = "B (Good)"
+    elif score >= 4:
+        grade = "C (Satisfactory)"
+    else:
+        grade = "Incomplete"
+
+    print(f"   GRADE: {grade}".center(60))
+    print("=" * 60)
+    print("\nThank you!\n")
+
+
+# Main execution
+if __name__ == "__main__":
+    print("Welcome to the Student Grading System\n")
+    
+    name = input("Enter Student Name (optional): ").strip()
+    
+    if name:
+        print("\n" + "="*60)
+        print(f"   GRADING REPORT FOR: {name.upper()}".center(60))
+        print("="*60 + "\n")
+    else:
+        print("\n" + "="*60)
+        print("   ANONYMOUS GRADING SESSION".center(60))
+        print("="*60 + "\n")
+    
+    grade_student()
