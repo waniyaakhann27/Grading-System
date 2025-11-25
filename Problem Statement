@@ -1,0 +1,3 @@
+Problem Statement
+A simple Python program for teachers to grade students easily. It asks yes/no questions about submitted certificates (Vidyarthi, Great Learning, HackerRank
+5-star, four extra certs) and the 35 Codes Assignment. Each yes gives 1 point (max 8). Finally, it shows the total score and grade (A+, A, B, etc.).
